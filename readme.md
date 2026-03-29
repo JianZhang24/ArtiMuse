@@ -1,7 +1,3 @@
-# MuseBench Appendix
-
-This README contains only the appendix content adapted from `ACL2026_MuseBench_Jian_Zhang (2)/latex/acl_latex.tex`.
-
 ## A. Source Catalog Formats and Standardized Schema
 
 ### A.1 Original Catalog Formats
@@ -314,6 +310,75 @@ Museum catalogs from different institutions use heterogeneous category systems w
 | 法帖 | 0 | 1 | 0 | 1 | 法帖 |
 | 甲骨 | 0 | 0 | 1 | 1 | 甲骨 |
 | 交通、运输工具 | 0 | 0 | 1 | 1 | 交通、运输工具 |
+
+English version:
+
+| Original | Gugong | Taipei | Zhejiang | Total | Mapping |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Ceramics | 0 | 5779 | 0 | 5779 | Ceramics |
+| Miscellaneous | 0 | 4184 | 0 | 4184 | Miscellaneous / Others |
+| Bronzes | 0 | 3812 | 0 | 3812 | Bronzes |
+| Jades | 0 | 3541 | 0 | 3541 | Jade, Gem, and Jadeite Objects |
+| Calligraphy and Painting | 0 | 0 | 1998 | 1998 | Calligraphy and Painting |
+| Enamels | 0 | 1513 | 0 | 1513 | Enamels |
+| Porcelain | 0 | 0 | 1468 | 1468 | Porcelain |
+| Ceramic Ware | 976 | 0 | 0 | 976 | Ceramics |
+| Stationery | 0 | 600 | 84 | 684 | Stationery and Scholar's Objects |
+| Lacquerware | 112 | 478 | 82 | 672 | Lacquerware |
+| Carvings | 0 | 462 | 0 | 462 | Carvings, Sculpture, and Statuary |
+| Seals | 300 | 0 | 0 | 300 | Seals and Tallies |
+| Rubbings from Stele Inscriptions | 0 | 0 | 286 | 286 | Rubbings from Stele Inscriptions |
+| Textiles and Embroidery | 242 | 0 | 15 | 257 | Textiles and Embroidery |
+| Jade and Gem Objects | 0 | 0 | 246 | 246 | Jade, Gem, and Jadeite Objects |
+| Seal Tallies | 0 | 0 | 244 | 244 | Seals and Tallies |
+| Inscriptions | 243 | 0 | 0 | 243 | Inscriptions |
+| Bone, Horn, and Ivory Objects | 0 | 0 | 198 | 198 | Bone, Horn, and Ivory Objects |
+| Bamboo, Wood, Ivory, Horn, and Gourd Objects | 181 | 0 | 0 | 181 | Bamboo, Wood, Ivory, Horn, and Gourd Objects |
+| Pottery | 0 | 0 | 178 | 178 | Pottery |
+| Bronze Objects | 0 | 0 | 177 | 177 | Bronzes |
+| Coins | 0 | 0 | 163 | 163 | Coins |
+| Bronze Ware | 140 | 0 | 0 | 140 | Bronze Ware |
+| Stone Objects, Stone Carvings, and Tiles | 0 | 0 | 134 | 134 | Stone Objects, Stone Carvings, and Tiles |
+| Jade Objects | 131 | 0 | 0 | 131 | Jade, Gem, and Jadeite Objects |
+| Documents and Publicity Materials | 0 | 0 | 107 | 107 | Documents and Publicity Materials |
+| Court Religion | 102 | 0 | 0 | 102 | Court Religion |
+| Scholar's Objects | 101 | 0 | 0 | 101 | Stationery and Scholar's Objects |
+| Sculpture and Statuary | 0 | 0 | 89 | 89 | Carvings, Sculpture, and Statuary |
+| Paintings | 81 | 0 | 0 | 81 | Calligraphy and Painting |
+| Clocks and Scientific Instruments | 81 | 0 | 0 | 81 | Clocks and Scientific Instruments |
+| Textiles | 0 | 77 | 0 | 77 | Textiles |
+| Archives and Manuscripts | 0 | 0 | 74 | 74 | Archives and Manuscripts |
+| Furniture | 54 | 0 | 16 | 70 | Furniture |
+| Enamel | 66 | 0 | 0 | 66 | Enamels |
+| Calligraphy | 0 | 56 | 0 | 56 | Calligraphy and Painting |
+| Daily Utensils | 50 | 0 | 0 | 50 | Daily Utensils |
+| Gold and Silver Objects | 0 | 0 | 47 | 47 | Gold, Silver, and Pewter Objects |
+| Music and Opera | 44 | 0 | 0 | 44 | Music and Opera |
+| Calligraphy Works | 40 | 0 | 0 | 40 | Calligraphy and Painting |
+| Sculpture | 32 | 0 | 0 | 32 | Carvings, Sculpture, and Statuary |
+| Weapons | 0 | 0 | 31 | 31 | Weapons |
+| Bamboo and Wood Carvings | 0 | 0 | 29 | 29 | Bamboo and Wood Carvings |
+| Military Paraphernalia and Honor Guards | 28 | 0 | 0 | 28 | Military Paraphernalia and Honor Guards |
+| Specimens and Fossils | 0 | 0 | 24 | 24 | Specimens and Fossils |
+| Paintings | 0 | 24 | 0 | 24 | Calligraphy and Painting |
+| Gold, Silver, and Pewter Objects | 20 | 0 | 0 | 20 | Gold, Silver, and Pewter Objects |
+| Musical and Ritual Instruments | 0 | 0 | 15 | 15 | Musical and Ritual Instruments |
+| Glassware | 12 | 0 | 1 | 13 | Glassware |
+| Jewelry | 13 | 0 | 0 | 13 | Jewelry |
+| Weights and Measures | 0 | 0 | 9 | 9 | Weights and Measures |
+| Foreign Artifacts | 9 | 0 | 0 | 9 | Foreign Artifacts |
+| Others | 0 | 0 | 9 | 9 | Miscellaneous / Others |
+| Folding Fans | 0 | 8 | 0 | 8 | Folding Fans |
+| Iron and Other Metal Objects | 0 | 0 | 8 | 8 | Iron and Other Metal Objects |
+| Coins | 0 | 7 | 0 | 7 | Coins |
+| Bills and Receipts | 0 | 0 | 6 | 6 | Bills and Receipts |
+| Enamel Ware | 0 | 0 | 5 | 5 | Enamels |
+| Rare Books | 0 | 0 | 3 | 3 | Rare Books |
+| Relics of Famous People | 0 | 0 | 2 | 2 | Relics of Famous People |
+| Silk Embroidery | 0 | 2 | 0 | 2 | Silk Embroidery |
+| Model Calligraphy Rubbings | 0 | 1 | 0 | 1 | Model Calligraphy Rubbings |
+| Oracle Bones | 0 | 0 | 1 | 1 | Oracle Bones |
+| Transport and Vehicles | 0 | 0 | 1 | 1 | Transport and Vehicles |
 
 ## B. Museum-Level Retrieval Performance
 
