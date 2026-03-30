@@ -1,4 +1,4 @@
-#ArtiMuse
+# ArtiMuse
 ## A. Source Catalog Formats and Standardized Schema
 
 ### A.1 Original Catalog Formats
