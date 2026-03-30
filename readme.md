@@ -1,6 +1,3 @@
-# MuseBench: A Comprehensive Benchmark for Multimodal Cultural Understanding of Chinese Museum Artifacts
-
-## Supplementary Materials
 
 ## A. Source Catalog Formats and Standardized Schema
 
@@ -216,9 +213,9 @@ Chinese version:
 
 ### A.3 Dynasty-Level Period Mapping and Statistics
 
-The table below outlines the mapping between dynasties and their corresponding time periods used in MuseBench. It also summarizes artifact counts for the full dataset and for each museum subset.
+The table below outlines the mapping between dynasties and their corresponding time periods used in ArtiMuse. It also summarizes artifact counts for the full dataset and for each museum subset.
 
-| Dynasty | Year Range | MuseBench | Zhejiang Prov. Museum | Palace Museum | National Palace Museum |
+| Dynasty | Year Range | ArtiMuse | Zhejiang Prov. Museum | Palace Museum | National Palace Museum |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Neolithic Period | -- | 1,197 | 540 | 27 | 630 |
 | Xia Dynasty | 2070-1600 BCE | 17 | 11 | 2 | 4 |
@@ -240,7 +237,7 @@ The table below outlines the mapping between dynasties and their corresponding t
 | People's Republic of China | 1949-present | 770 | 599 | 68 | 103 |
 | **Total** |  | **29,352** | **5,750** | **3,058** | **20,544** |
 
-MuseBench exhibits a strong long-tailed chronological distribution. Most samples come from recent dynasties such as Qing and Ming, while ancient or short-lived dynasties such as Xia, Qin, and Sui contain far fewer artifacts. This reflects both historical preservation realities and museum-specific collection priorities.
+ArtiMuse exhibits a strong long-tailed chronological distribution. Most samples come from recent dynasties such as Qing and Ming, while ancient or short-lived dynasties such as Xia, Qin, and Sui contain far fewer artifacts. This reflects both historical preservation realities and museum-specific collection priorities.
 
 ### A.4 Category Mapping and Statistics
 
