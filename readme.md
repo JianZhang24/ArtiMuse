@@ -1,4 +1,4 @@
-# ArtiMuse
+# ArtiMuse: A Comprehensive Dataset for Multimodal Cultural Understanding of Chinese Museum Artifacts
 ## A. Source Catalog Formats and Standardized Schema
 
 ### A.1 Original Catalog Formats
