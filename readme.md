@@ -633,64 +633,171 @@ You are a quality auditor for museum Visual Question Answering (VQA) data. The i
 
 ## D. Examples
 
-<table>
-  <tr>
-    <td width="34%" align="center" valign="top">
-      <img src="samples_assets/images/25013_1024_.jpg" alt="Example 1" width="260">
-    </td>
-    <td width="66%" valign="top">
-      <p><strong>QA Pairs</strong></p>
-      <ul>
-        <li>Q: 此器物的器形属于什么？<br>A: 梅瓶</li>
-        <li>Q: 这件文物的口沿样式是什么？<br>A: 折沿</li>
-        <li>Q: 这件文物的肩部形态如何？<br>A: 丰肩</li>
-        <li>Q: 这件文物腹部绘有什么纹样？<br>A: 云龙纹</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td width="34%" align="center" valign="top">
-      <img src="samples_assets/images/15851_1024_.jpg" alt="Example 2" width="260">
-    </td>
-    <td width="66%" valign="top">
-      <p><strong>QA Pairs</strong></p>
-      <ul>
-        <li>Q: 此器物属于什么器物类型？<br>A: 墨床</li>
-        <li>Q: 这件文物整体仿作什么样的样式？<br>A: 仿木几式</li>
-        <li>Q: 这件文物的床面底色是什么？<br>A: 白地</li>
-        <li>Q: 这件文物的床面饰有什么纹样？<br>A: 白地粉彩牡丹纹</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td width="34%" align="center" valign="top">
-      <img src="samples_assets/images/21082_1024_.jpg" alt="Example 3" width="260">
-    </td>
-    <td width="66%" valign="top">
-      <p><strong>QA Pairs</strong></p>
-      <ul>
-        <li>Q: 这件文物的表层采用了什么装饰工艺效果？<br>A: 全部点翠</li>
-        <li>Q: 这件文物外部呈现什么样的纹饰结构？<br>A: 黑丝线编织成的网状纹饰</li>
-        <li>Q: 这件文物前部缀有几只鸟形金饰？<br>A: 5只金累丝凤</li>
-        <li>Q: 这件文物前部的鸟形金饰上嵌有什么？<br>A: 珍珠、宝石</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td width="34%" align="center" valign="top">
-      <img src="samples_assets/images/2421_1024_.jpg" alt="Example 4" width="260">
-    </td>
-    <td width="66%" valign="top">
-      <p><strong>QA Pairs</strong></p>
-      <ul>
-        <li>Q: 这件文物的口部形态是什么？<br>A: 弇口</li>
-        <li>Q: 这件文物的腹部形状如何？<br>A: 圆鼓腹</li>
-        <li>Q: 这件文物的足部结构是什么？<br>A: 圈足</li>
-        <li>Q: 这件文物腹部两侧有什么附属构件？<br>A: 兽首衔环耳</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+### Example 1
+
+<p align="center">
+  <img src="samples_assets/images/25013_1024_.jpg" alt="Example 1 image 1" width="260">
+  <img src="samples_assets/images/25012_1024_.jpg" alt="Example 1 image 2" width="260">
+</p>
+
+- ZH Q: 此器物的器形属于什么？ A: 梅瓶
+  EN Q: What type of vessel form does this artifact belong to? A: Meiping
+- ZH Q: 从该文物的造型与纹饰风格看，它可能属于哪个时代？ A: 元
+  EN Q: Based on its form and decorative style, which period might this artifact belong to? A: Yuan dynasty
+- ZH Q: 这件文物的口沿样式是什么？ A: 折沿
+  EN Q: What is the style of this artifact's mouth rim? A: Everted rim
+- ZH Q: 这件文物的颈部特征是什么？ A: 细颈
+  EN Q: What is the feature of this artifact's neck? A: Slender neck
+- ZH Q: 这件文物的肩部形态如何？ A: 丰肩
+  EN Q: What is the shape of this artifact's shoulder? A: Full shoulder
+- ZH Q: 这件文物肩以下的器身走势如何？ A: 肩以下渐敛
+  EN Q: How does the body of this artifact change below the shoulder? A: Gradually narrows below the shoulder
+- ZH Q: 这件文物的足部结构是什么？ A: 圈足
+  EN Q: What is the foot structure of this artifact? A: Ring foot
+- ZH Q: 这件文物的足底是否施釉？ A: 无釉
+  EN Q: Is the base of this artifact glazed? A: Unglazed
+- ZH Q: 这件文物的足底呈现什么颜色？ A: 泛火石红色
+  EN Q: What color does the base of this artifact appear? A: Flint-red tint
+- ZH Q: 这件文物的外壁纹样是用什么线条分层的？ A: 青花双弦线
+  EN Q: What lines divide the exterior decoration of this artifact into sections? A: Double underglaze-blue lines
+- ZH Q: 这件文物的外壁纹样共分成几层？ A: 5层
+  EN Q: Into how many layers is the exterior decoration divided? A: 5 layers
+- ZH Q: 这件文物肩部绘有哪一种草叶卷曲状纹样？ A: 卷草纹
+  EN Q: What curled foliage motif is painted on the shoulder of this artifact? A: Scrolling grass pattern
+- ZH Q: 这件文物肩部绘有哪一种向下垂落的纹样？ A: 下垂云肩纹
+  EN Q: What downward-hanging motif is painted on the shoulder of this artifact? A: Pendant cloud-collar motif
+- ZH Q: 这件文物的云肩内绘有什么纹样？ A: 缠枝菊纹
+  EN Q: What motif is painted inside the cloud-collar decoration? A: Intertwining chrysanthemum pattern
+- ZH Q: 这件文物的云肩纹间饰有什么纹样？ A: 卷草纹
+  EN Q: What motif fills the spaces between the cloud-collar decorations? A: Scrolling grass pattern
+- ZH Q: 这件文物腹部绘有什么纹样？ A: 云龙纹
+  EN Q: What motif is painted on the belly of this artifact? A: Cloud-and-dragon pattern
+- ZH Q: 这件文物胫部绘有哪一种草叶卷曲状纹样？ A: 卷草纹
+  EN Q: What curled foliage motif is painted on the lower body of this artifact? A: Scrolling grass pattern
+- ZH Q: 这件文物胫部绘有哪一种向上展开的瓣状纹样？ A: 仰莲瓣纹
+  EN Q: What upward-opening petal motif is painted on the lower body of this artifact? A: Upturned lotus-petal pattern
+
+### Example 2
+
+<p align="center">
+  <img src="samples_assets/images/15851_1024_.jpg" alt="Example 2 image 1" width="260">
+  <img src="samples_assets/images/15852_1024_.jpg" alt="Example 2 image 2" width="260">
+</p>
+
+- ZH Q: 此器物属于什么器物类型？ A: 墨床
+  EN Q: What type of object is this artifact? A: Ink rest
+- ZH Q: 从该文物的造型与纹饰风格看，它可能属于哪个时代？ A: 清乾隆
+  EN Q: Based on its form and decorative style, which period might this artifact belong to? A: Qianlong period of the Qing dynasty
+- ZH Q: 这件文物整体仿作什么样的样式？ A: 仿木几式
+  EN Q: What style does this artifact imitate overall? A: Imitation wooden stand form
+- ZH Q: 这件文物边部施有什么釉色与纹理效果？ A: 酱褐色仿木纹釉
+  EN Q: What glaze color and texture effect is applied to the edges of this artifact? A: Brown glaze imitating wood grain
+- ZH Q: 这件文物四侧面施有什么釉色与纹理效果？ A: 酱褐色仿木纹釉
+  EN Q: What glaze color and texture effect is applied to the four sides of this artifact? A: Brown glaze imitating wood grain
+- ZH Q: 这件文物的床面底色是什么？ A: 白地
+  EN Q: What is the ground color of the top surface of this artifact? A: White ground
+- ZH Q: 这件文物的床面饰有什么纹样？ A: 白地粉彩牡丹纹
+  EN Q: What motif decorates the top surface of this artifact? A: Famille-rose peony pattern on a white ground
+- ZH Q: 这件文物床面一边贴塑了什么？ A: 粉彩书卷
+  EN Q: What is attached in relief on one side of the top surface? A: A famille-rose scroll
+- ZH Q: 这件文物床面一边的贴塑物像什么陈设？ A: 又如床上置枕
+  EN Q: What furnishing does the relief element on one side resemble? A: Like a pillow placed on a bed
+- ZH Q: 这件文物可以用于怎样的倚靠用途？ A: 可供湿墨倚靠
+  EN Q: What practical support function can this artifact serve? A: It can support wet inksticks
+- ZH Q: 这件文物所属类别中常见哪一类仿作釉色效果？ A: 仿竹木釉
+  EN Q: What imitation glaze effect is common in this category of artifact? A: Bamboo- and wood-imitation glaze
+- ZH Q: 这件文物所属类别中常见哪一类器形风格？ A: 家具式者
+  EN Q: What vessel-form style is common in this category of artifact? A: Furniture-style forms
+- ZH Q: 这件文物的造型风格如何？ A: 秀巧新奇
+  EN Q: How can the style of this artifact's form be described? A: Delicate and novel
+- ZH Q: 这件文物施釉着重摹仿什么质感？ A: 竹木器的质地感
+  EN Q: What texture does the glazing of this artifact emphasize imitating? A: The texture of bamboo and wooden objects
+- ZH Q: 这件文物表面还施有哪些装饰类型？ A: 五彩、粉彩等纹饰
+  EN Q: What other decorative types are applied to the surface of this artifact? A: Wucai, famille-rose, and related ornamentation
+
+### Example 3
+
+<p align="center">
+  <img src="samples_assets/images/21082_1024_.jpg" alt="Example 3 image 1" width="260">
+  <img src="samples_assets/images/21081_1024_.jpg" alt="Example 3 image 2" width="260">
+</p>
+
+- ZH Q: 从该文物通体装饰与样式看，它可能属于哪个时代？ A: 清
+  EN Q: Based on the overall decoration and style, which period might this artifact belong to? A: Qing dynasty
+- ZH Q: 这件文物的表层采用了什么装饰工艺效果？ A: 全部点翠
+  EN Q: What decorative craft effect is used on the surface of this artifact? A: Entirely decorated with kingfisher feather inlay
+- ZH Q: 这件文物外部呈现什么样的纹饰结构？ A: 黑丝线编织成的网状纹饰
+  EN Q: What kind of ornamental structure appears on the exterior of this artifact? A: A mesh pattern woven from black silk threads
+- ZH Q: 这件文物前部缀有几只鸟形金饰？ A: 5只金累丝凤
+  EN Q: How many bird-shaped gold ornaments are attached to the front of this artifact? A: Five filigree gold phoenixes
+- ZH Q: 这件文物前部的鸟形金饰上嵌有什么？ A: 珍珠、宝石
+  EN Q: What is inlaid on the bird-shaped gold ornaments at the front? A: Pearls and gemstones
+- ZH Q: 这件文物前部的鸟形装饰口衔什么垂饰？ A: 珍珠、宝石流苏
+  EN Q: What hanging ornaments do the bird-shaped decorations at the front hold in their beaks? A: Pearl and gemstone tassels
+- ZH Q: 这件文物前部鸟形金饰的下排缀有什么装饰？ A: 9只金翟
+  EN Q: What decoration is attached in the lower row beneath the front bird-shaped gold ornaments? A: Nine gold pheasants
+- ZH Q: 这件文物下排鸟形装饰的材质做法是什么？ A: 银镀金质
+  EN Q: What is the material treatment of the lower row bird-shaped decorations? A: Gilt silver
+- ZH Q: 这件文物下排鸟形装饰口衔什么样的流苏？ A: 珍珠、珊瑚、绿松石、青金石、红蓝宝石等贯穿的流苏
+  EN Q: What kind of tassels are held in the beaks of the lower row bird-shaped decorations? A: Tassels strung with pearls, coral, turquoise, lapis lazuli, and red and blue gemstones
+- ZH Q: 这件文物后部是否也有垂挂装饰？ A: 亦有几串流苏垂饰
+  EN Q: Does the back of this artifact also have hanging ornaments? A: It also has several tassel pendants
+- ZH Q: 这件文物整体呈现出怎样的视觉气质？ A: 珠光宝气，珍贵豪华
+  EN Q: What overall visual impression does this artifact convey? A: Dazzling with jewels, precious and luxurious
+
+### Example 4
+
+<p align="center">
+  <img src="samples_assets/images/2421_1024_.jpg" alt="Example 4 image 1" width="260">
+  <img src="samples_assets/images/2422_1024_.jpg" alt="Example 4 image 2" width="260">
+</p>
+
+- ZH Q: 从该文物的器形与纹饰风格看，它可能属于哪个时代？ A: 西周中期
+  EN Q: Based on its form and decorative style, which period might this artifact belong to? A: Middle Western Zhou
+- ZH Q: 这件文物的口部形态是什么？ A: 弇口
+  EN Q: What is the shape of this artifact's mouth? A: Restrained mouth
+- ZH Q: 这件文物的腹部形状如何？ A: 圆鼓腹
+  EN Q: What is the shape of this artifact's belly? A: Rounded swelling belly
+- ZH Q: 这件文物的足部结构是什么？ A: 圈足
+  EN Q: What is the foot structure of this artifact? A: Ring foot
+- ZH Q: 这件文物腹部两侧有什么附属构件？ A: 兽首衔环耳
+  EN Q: What attached elements appear on both sides of this artifact's belly? A: Beast-head ring handles
+- ZH Q: 这件文物器身自上而下装饰了什么纹样？ A: 平行的瓦棱纹
+  EN Q: What pattern decorates the body of this artifact from top to bottom? A: Parallel ribbed pattern
+- ZH Q: 这件文物的纹饰分布状态如何？ A: 满饰平行的瓦棱纹
+  EN Q: How are the decorative patterns distributed on this artifact? A: Fully covered with parallel ribbed pattern
+
+### Example 5
+
+<p align="center">
+  <img src="samples_assets/images/5714_1024_.jpg" alt="Example 5 image 1" width="260">
+  <img src="samples_assets/images/5715_1024_.jpg" alt="Example 5 image 2" width="260">
+</p>
+
+- ZH Q: 从该文物的印面书风与整体样式看，它可能属于哪个时代？ A: 清
+  EN Q: Based on the script style of the seal face and the overall appearance, which period might this artifact belong to? A: Qing dynasty
+- ZH Q: 从该文物的篆刻风格看，它可能与哪位作者有关？ A: 赵之琛
+  EN Q: Based on the seal-carving style, which artist might this artifact be associated with? A: Zhao Zhichen
+- ZH Q: 这件文物是用什么材质制成的？ A: 寿山石制
+  EN Q: What material is this artifact made from? A: Shoushan stone
+- ZH Q: 这件文物的整体形状是什么？ A: 方形
+  EN Q: What is the overall shape of this artifact? A: Square
+- ZH Q: 这件文物侧面采用了什么刻款形式？ A: 薄意侧款
+  EN Q: What kind of side inscription style is used on this artifact? A: Bas-relief side inscription
+- ZH Q: 这件文物印面的文字是什么书体？ A: 篆书体
+  EN Q: What script style is used for the inscription on the seal face? A: Seal script
+- ZH Q: 这件文物印面的文字属于哪种色文形式？ A: 朱文
+  EN Q: What seal-text type does the inscription on the seal face belong to? A: Red-character seal text
+- ZH Q: 这件文物印面文字的起读位置与顺序如何？ A: 右上起顺读
+  EN Q: What is the starting position and reading order of the seal-face inscription? A: Read in sequence starting from the upper right
+- ZH Q: 这件文物印面上的文字共有几个字？ A: “金石千秋”四字
+  EN Q: How many characters appear on the seal face? A: Four characters, "Jin Shi Qian Qiu"
+- ZH Q: 这件文物侧面的边款是以什么方式刻出的？ A: 阴刻
+  EN Q: In what way is the side inscription carved on this artifact? A: Incised carving
+- ZH Q: 这件文物侧面的边款内容是什么？ A: “赵之琛拟汉”
+  EN Q: What is the content of the side inscription on this artifact? A: "Zhao Zhichen imitating Han style"
+- ZH Q: 这件文物印面的边栏特征是什么？ A: 宽边栏
+  EN Q: What is the border feature of the seal face? A: Wide border
 
 ## E. Full Dataset Access
 
