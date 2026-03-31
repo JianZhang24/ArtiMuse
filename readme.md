@@ -630,3 +630,72 @@ You are a quality auditor for museum Visual Question Answering (VQA) data. The i
   }
 ]
 ```
+
+## D. Examples
+
+<table>
+  <tr>
+    <td width="34%" align="center" valign="top">
+      <img src="samples_assets/images/25013_1024_.jpg" alt="Example 1" width="260">
+    </td>
+    <td width="66%" valign="top">
+      <p><strong>QA Pairs</strong></p>
+      <ul>
+        <li>Q: 此器物的器形属于什么？<br>A: 梅瓶</li>
+        <li>Q: 这件文物的口沿样式是什么？<br>A: 折沿</li>
+        <li>Q: 这件文物的肩部形态如何？<br>A: 丰肩</li>
+        <li>Q: 这件文物腹部绘有什么纹样？<br>A: 云龙纹</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="34%" align="center" valign="top">
+      <img src="samples_assets/images/15851_1024_.jpg" alt="Example 2" width="260">
+    </td>
+    <td width="66%" valign="top">
+      <p><strong>QA Pairs</strong></p>
+      <ul>
+        <li>Q: 此器物属于什么器物类型？<br>A: 墨床</li>
+        <li>Q: 这件文物整体仿作什么样的样式？<br>A: 仿木几式</li>
+        <li>Q: 这件文物的床面底色是什么？<br>A: 白地</li>
+        <li>Q: 这件文物的床面饰有什么纹样？<br>A: 白地粉彩牡丹纹</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="34%" align="center" valign="top">
+      <img src="samples_assets/images/21082_1024_.jpg" alt="Example 3" width="260">
+    </td>
+    <td width="66%" valign="top">
+      <p><strong>QA Pairs</strong></p>
+      <ul>
+        <li>Q: 这件文物的表层采用了什么装饰工艺效果？<br>A: 全部点翠</li>
+        <li>Q: 这件文物外部呈现什么样的纹饰结构？<br>A: 黑丝线编织成的网状纹饰</li>
+        <li>Q: 这件文物前部缀有几只鸟形金饰？<br>A: 5只金累丝凤</li>
+        <li>Q: 这件文物前部的鸟形金饰上嵌有什么？<br>A: 珍珠、宝石</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="34%" align="center" valign="top">
+      <img src="samples_assets/images/2421_1024_.jpg" alt="Example 4" width="260">
+    </td>
+    <td width="66%" valign="top">
+      <p><strong>QA Pairs</strong></p>
+      <ul>
+        <li>Q: 这件文物的口部形态是什么？<br>A: 弇口</li>
+        <li>Q: 这件文物的腹部形状如何？<br>A: 圆鼓腹</li>
+        <li>Q: 这件文物的足部结构是什么？<br>A: 圈足</li>
+        <li>Q: 这件文物腹部两侧有什么附属构件？<br>A: 兽首衔环耳</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+## E. Full Dataset Access
+
+To access the full dataset, please:
+
+1. Fill in the [Data Usage Agreement Form](Legal-Commitment.docx).
+2. After review, you will receive the password via email.
+3. Use the password to unzip the dataset files.
