@@ -1,4 +1,21 @@
 # ArtiMuse: A Comprehensive Dataset for Multimodal Cultural Understanding of Chinese Museum Artifacts
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <strong>Full Dataset Access</strong><br><br>
+        <strong>📩 Request all dataset files:</strong> <a href="mailto:jian.zhang22@student.xjtlu.edu.cn">jian.zhang22@student.xjtlu.edu.cn</a><br>
+        <strong>🔗 Download archive:</strong> <a href="https://drive.google.com/file/d/1A6Vr5Wcc7udCJP-oAc5Kbdl2U83DkC8E/view?usp=sharing">Google Drive</a><br>
+        <strong>🔐 Archive password:</strong> Available upon request by email
+      </td>
+    </tr>
+  </table>
+</div>
+
+> [!IMPORTANT]
+> If you need access to the complete ArtiMuse dataset for review or research, please email <a href="mailto:jian.zhang22@student.xjtlu.edu.cn">jian.zhang22@student.xjtlu.edu.cn</a>. The dataset archive can be downloaded from <a href="https://drive.google.com/file/d/1A6Vr5Wcc7udCJP-oAc5Kbdl2U83DkC8E/view?usp=sharing">Google Drive</a>, and the unzip password will be provided by email.
+
 ## A. Source Catalog Formats and Standardized Schema
 
 ### A.1 Original Catalog Formats
@@ -738,8 +755,10 @@ You are a quality auditor for museum Visual Question Answering (VQA) data. The i
 
 ## E. Full Dataset Access
 
-To access the full dataset, please:
+For quick access information, see the notice at the top of this page.
 
-1. Fill in the [Data Usage Agreement Form](Legal-Commitment.docx).
-2. After review, you will receive the password via email.
-3. Use the password to unzip the dataset files.
+To request the complete dataset:
+
+1. Download the archive from [Google Drive](https://drive.google.com/file/d/1A6Vr5Wcc7udCJP-oAc5Kbdl2U83DkC8E/view?usp=sharing).
+2. Email [jian.zhang22@student.xjtlu.edu.cn](mailto:jian.zhang22@student.xjtlu.edu.cn) to request the unzip password.
+3. If needed, fill in the [Data Usage Agreement Form](Legal-Commitment.docx).
