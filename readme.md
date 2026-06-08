@@ -16,6 +16,226 @@
 > [!IMPORTANT]
 > If you need access to the complete ArtiMuse dataset for review or research, please email <a href="mailto:jian.zhang22@student.xjtlu.edu.cn">jian.zhang22@student.xjtlu.edu.cn</a>. The dataset archive can be downloaded from <a href="https://drive.google.com/file/d/1A6Vr5Wcc7udCJP-oAc5Kbdl2U83DkC8E/view?usp=sharing">Google Drive</a>, and the unzip password will be provided by email.
 
+## Rebuttal Supplement 1: LLM-based QA Scoring Prompt
+
+To make the LLM-based Cultural VQA evaluation reproducible and auditable, we provide the exact scoring prompt used for answer-level evaluation. The evaluator is explicitly instructed to score only from the question, ground-truth answer, and model prediction, without using the image or external cultural knowledge. This design prevents the evaluator from rewarding plausible but unsupported answers and makes the 0-5 scoring scale stricter for museum-specific terminology.
+
+中文说明：为保证 LLM-based Cultural VQA 评估过程可复现、可核查，我们在此提供用于答案级评估的完整评分提示词。该提示词要求评估器只基于 question、ground_truth 和 model_prediction 打分，不看图片、不重新回答问题、不使用外部知识，也不依据中国文化、文物或历史知识推断同义词、别称和隐含关系。这样可以降低“看起来合理但没有字面覆盖标准答案”的预测被高估的风险，并使 0-5 分评分标准更适合博物馆专业术语评估。
+
+### Chinese prompt
+
+```text
+你是一个博物馆文物 VQA 答案评估器。你只根据 question、ground_truth 和 model_prediction 对 model_prediction 打 0-5 分。
+
+禁止事项：
+1. 不看图片。
+2. 不重新回答问题。
+3. 不使用外部知识。
+4. 不根据中国文化、文物知识、历史知识推断同义词、别称或隐含关系。
+5. 不因为 model_prediction 看起来合理就给高分。
+
+评分依据：
+- model_prediction 是否字面覆盖 ground_truth 的核心信息；
+- 信息粒度是否足够；
+- 是否答中了 question 要问的属性类型。
+
+评分标准：
+5 = 完全正确。model_prediction 与 ground_truth 字面一致或几乎一致，只允许繁简体、可忽略后缀、语序变化等极小差异。
+4 = 核心正确但表达略不标准。能从字面直接判断核心一致，但术语、格式或表述不如 ground_truth 精确。
+3 = 有实质正确信息但明显不完整或粒度不足。model_prediction 答中了 ground_truth 的上位类别、关键组成部分或主要方向，但缺少最具体、最关键的信息。
+2 = 相关但没有答中核心。model_prediction 和 question 要问的属性有关，也和 ground_truth 有局部关系，但没有表达 ground_truth 的核心判断点。
+1 = 很弱相关。model_prediction 只和文物、外观、材质、部位等大方向有弱关系，但既没有答中 ground_truth 的上位类别，也没有答中核心属性，答案基本不可用。
+0 = 错误、无关或无效。model_prediction 与 ground_truth 矛盾、完全答非所问、为空、无法理解，或属性类型答错。
+
+低分段区分：
+- 3 分：必须包含 ground_truth 的上位类别或实质组成信息。
+- 2 分：只是在同一问题方向上相关，但没有答中核心。
+- 1 分：只有非常弱的对象或视觉相关性，答案基本不可用。
+- 0 分：错误、无关、矛盾、空答、属性类型错。
+
+常见例子：
+ground_truth: 紫檀
+model_prediction: 紫檀木
+score: 5
+
+ground_truth: 紫檀
+model_prediction: 木
+score: 3
+
+ground_truth: 紫檀
+model_prediction: 棕色木质外观
+score: 2
+
+ground_truth: 紫檀
+model_prediction: 棕色
+score: 1
+
+ground_truth: 紫檀
+model_prediction: 玉
+score: 0
+
+ground_truth: 直筒式
+model_prediction: 直筒形
+score: 4
+
+ground_truth: 直筒式
+model_prediction: 圆柱形
+score: 3
+
+ground_truth: 直筒式
+model_prediction: 圆形
+score: 2
+
+ground_truth: 直筒式
+model_prediction: 有花纹
+score: 0
+
+ground_truth: 直口
+model_prediction: 口沿平直
+score: 4
+
+ground_truth: 直口
+model_prediction: 开口
+score: 3
+
+ground_truth: 直口
+model_prediction: 圆形开口
+score: 2
+
+ground_truth: 直口
+model_prediction: 圆形
+score: 1
+
+ground_truth: 直口
+model_prediction: 底足较高
+score: 0
+
+只输出一个整数分数，不要输出任何解释、标点、JSON、标签或额外文本。
+
+输入：
+question: {question}
+ground_truth: {ground_truth}
+model_prediction: {model_prediction}
+
+输出：
+```
+
+### English prompt
+
+```text
+You are a VQA answer evaluator for museum artifacts. You must score model_prediction from 0 to 5 based only on question, ground_truth, and model_prediction.
+
+Prohibited:
+1. Do not look at the image.
+2. Do not answer the question again.
+3. Do not use external knowledge.
+4. Do not infer synonyms, alternative names, or implicit relations from Chinese culture, artifact knowledge, or historical knowledge.
+5. Do not give a high score only because model_prediction appears plausible.
+
+Scoring basis:
+- Whether model_prediction literally covers the core information in ground_truth;
+- Whether the information granularity is sufficient;
+- Whether model_prediction answers the attribute type asked by question.
+
+Scoring criteria:
+5 = Completely correct. model_prediction is literally identical or almost identical to ground_truth. Only minimal differences such as simplified/traditional Chinese, negligible suffixes, or word-order changes are allowed.
+4 = Core meaning is correct but the expression is slightly non-standard. The core match can be directly judged from the literal text, but the terminology, format, or phrasing is less precise than ground_truth.
+3 = Contains substantive correct information but is clearly incomplete or insufficiently specific. model_prediction answers a higher-level category, key component, or main direction of ground_truth, but misses the most specific and critical information.
+2 = Related but misses the core. model_prediction is related to the attribute asked by question and partially related to ground_truth, but does not express the core judgment in ground_truth.
+1 = Weakly related. model_prediction is only weakly related to the artifact, appearance, material, part, or another broad direction, but does not answer the higher-level category or core attribute of ground_truth. The answer is basically unusable.
+0 = Wrong, irrelevant, or invalid. model_prediction contradicts ground_truth, is completely off-topic, is empty, is incomprehensible, or answers the wrong attribute type.
+
+Low-score distinctions:
+- Score 3: must contain the higher-level category or substantive component information of ground_truth.
+- Score 2: only related to the same question direction, but does not hit the core.
+- Score 1: only very weak object-level or visual relevance; the answer is basically unusable.
+- Score 0: wrong, irrelevant, contradictory, empty, or wrong attribute type.
+
+Common examples:
+ground_truth: 紫檀
+model_prediction: 紫檀木
+score: 5
+
+ground_truth: 紫檀
+model_prediction: 木
+score: 3
+
+ground_truth: 紫檀
+model_prediction: 棕色木质外观
+score: 2
+
+ground_truth: 紫檀
+model_prediction: 棕色
+score: 1
+
+ground_truth: 紫檀
+model_prediction: 玉
+score: 0
+
+ground_truth: 直筒式
+model_prediction: 直筒形
+score: 4
+
+ground_truth: 直筒式
+model_prediction: 圆柱形
+score: 3
+
+ground_truth: 直筒式
+model_prediction: 圆形
+score: 2
+
+ground_truth: 直筒式
+model_prediction: 有花纹
+score: 0
+
+ground_truth: 直口
+model_prediction: 口沿平直
+score: 4
+
+ground_truth: 直口
+model_prediction: 开口
+score: 3
+
+ground_truth: 直口
+model_prediction: 圆形开口
+score: 2
+
+ground_truth: 直口
+model_prediction: 圆形
+score: 1
+
+ground_truth: 直口
+model_prediction: 底足较高
+score: 0
+
+Output only one integer score. Do not output any explanation, punctuation, JSON, labels, or extra text.
+
+Input:
+question: {question}
+ground_truth: {ground_truth}
+model_prediction: {model_prediction}
+
+Output:
+```
+
+## Rebuttal Supplement 2: Anonymized Human Validator Information
+
+To further clarify the professional human validation process, we provide anonymized background information for the five validators involved in the Cultural VQA quality review. The validation team consisted of two museum practitioners and three trained student annotators, including two students majoring in Computer Science and one student majoring in Digital Media Technology. Each validator reviewed 20% of the validation samples under the same task setting and the same verification criteria. All identities are anonymized, and no personal names, institutions, contact information, or identifiable employment details are disclosed.
+
+中文说明：为进一步说明 Cultural VQA 的专业人工审查过程，我们补充 5 位审查者的脱敏背景信息。人工审查团队包括 2 位博物馆从业者和 3 位经过培训的学生标注员，其中 2 位学生主修计算机科学，1 位学生主修数字媒体技术。每位审查者负责 20% 的验证样本，任务设置和核验标准完全一致。下表仅保留与数据质量审查相关的专业背景，不披露姓名、单位、联系方式或可识别的任职信息。
+
+| Validator ID | Anonymized background | Review share | Task and verification criteria |
+| --- | --- | --- | --- |
+| V1 | Museum practitioner with practical experience in artifact cataloging and collection-description review. | 20% | Same validation task for all validators, following the criteria in Prompt C.2: Visual-Grounded QA Verification. |
+| V2 | Museum practitioner with practical experience in cultural heritage documentation and public-facing exhibit text review. | 20% | Same validation task for all validators, following the criteria in Prompt C.2: Visual-Grounded QA Verification. |
+| V3 | Trained student annotator majoring in Computer Science. | 20% | Same validation task for all validators, following the criteria in Prompt C.2: Visual-Grounded QA Verification. |
+| V4 | Trained student annotator majoring in Computer Science. | 20% | Same validation task for all validators, following the criteria in Prompt C.2: Visual-Grounded QA Verification. |
+| V5 | Trained student annotator majoring in Digital Media Technology. | 20% | Same validation task for all validators, following the criteria in Prompt C.2: Visual-Grounded QA Verification. |
+
+All validators followed the same verification standard defined in Prompt C.2: Visual-Grounded QA Verification. The checks cover whether the question is visually grounded, whether the answer is consistent with the image and textual evidence, whether hallucination or information leakage exists, whether the question has a single focus, whether the answer granularity is sufficient, whether professional terminology is acceptable, and whether the sample is ambiguous or unverifiable.
+
+所有审查者均按照 Prompt C.2: Visual-Grounded QA Verification 中的核验标准进行人工核查，重点包括：问题是否需要图像理解、答案是否与图像和文本证据一致、是否存在幻觉或信息泄漏、问题是否单一聚焦、答案粒度是否足够、专业术语是否可接受，以及样本是否存在歧义或不可判定情况。
+
 ## A. Source Catalog Formats and Standardized Schema
 
 ### A.1 Original Catalog Formats
